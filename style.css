@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;500;700");
+
+/*STYLES GENERAUX*/
+*{
+  font-family: Optima, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  text-align: justify;
+  box-sizing: content-box;
+}
+body{
+  background: #e0efeb;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+p{
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/*SECTIONS sous la photo*/
+section{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 70px auto;
+  background-color: #fff;
+  padding-bottom: 40px;
+}
+section h2{
+  margin: 20px 0;
+  width: 90%;
+}
+section > div{
+  width: 90%;
+}
+
+/*SECTION INFOS*/
+.photo{
+  text-align: center;
+}
+
+#avatar{
+  width: 200px;
+  height: 220px;
+  border-radius: 90%;
+  transition: 0.5s ease;
+}
+
+#avatar:hover {
+  transform: scale(1.08);
+}
+
+.contact-flex{
+  display: inline;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.contact-flex p:first-child::after {
+  content: "\00a0";
+}
+
+/*SECTION EXP ET FORMATION*/
+.exp {
+  display: flex;
+  flex-flow: row wrap;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.exp:last-child {
+  border-bottom: none;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.exp-info{
+  display: flex;
+  flex-flow: column wrap;
+}
+.exp-logo{
+  flex: 0 0 25%;
+  max-width: 100px;
+}
+
+.exp-info{
+  flex: 0 0 70%;
+  margin-left: auto;
+}
+.exp img{
+  width: 100%;
+}
+.exp h3{
+  font-size:  1em;
+}
+.exp h4{
+  font-size:  1em;
+  font-weight: normal;
+}
+
+/*VERSION BUREAU DU CV Taille des Box*/
+@media screen and (min-width: 980px){
+  section{
+      width: 80%;
+      box-shadow: 0px 0px 10px #bbb;
+  }
+
+  .prez, .contact{
+      flex: 0 0 45%;
+  }
+  .prez{
+      border-bottom: none;
+      border-right: 2px solid #ccc;
+      padding-right: 20px;
+      margin-left: auto;
+  }
+  .contact{
+      padding-left: 20px;
+      margin-right: auto;
+  }
+  .exp-logo{
+      flex: 0 0 10%;
+  }
+  .exp-info, .exp-desc{
+      flex: 0 0 85%;
+      margin-left: auto;
+  }
+  .interet{
+      flex: 0 1 25%;
+  }
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/*SECTION COMPETENCES*/
+
+.skills{
+  width: 70%;
+  margin: 8px auto;
+  color: rgb(0, 0, 0);
+}
+
+.bar{
+  background: #fff;
+  height: 2px;
+  border: 0px solid rgba(0,0,0,5);
+  border-radius: 3px;
+  overflow: scroll;
+}
+
+.bar span{
+  height: 2px;
+  float: left;
+  background: rgb(0, 0, 0);
+}
+
+.html{
+  width: 65%;
+  animation: html 20s;
+}
+
+.ruby{
+  width: 15%;
+  animation: ruby 40s;
+}
+
+.CSS{
+  width: 40%;
+  animation: CSS 20s;
+}
+
+.js{
+  width: 10%;
+  animation: js 35s;
+}
+@keyframes html {
+  0%{
+      width: 0%;
+  }
+  65%{
+      width: 65%;
+  }
+}
+
+@keyframes ruby {
+  0%{
+      width: 0%;
+  }
+  15%{
+      width: 15%;
+  }
+}
+@keyframes CSS {
+  0%{
+      width: 0%;
+  }
+  40%{
+      width: 40%;
+  }
+}
+
+@keyframes js {
+  0%{
+      width: 0%;
+  }
+  10%{
+      width: 10%;
+  }
+}
+
+/*Menu centres d'intérêt*/
+.container3{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn{
+  border: 0px solid #fff;
+  background: none;
+  padding: 15px;
+  font-size: 20px;
+  font-family: "monsterrat";
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/*Social Media*/
+.socialmedia {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.socialmedia a{
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  background-color: #B2A8C1;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: .5s linear;
+}
+
+.socialmedia a:hover{
+  color: #000000;
+  background-color: transparent;
+  transform: scale(1.3);
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  #avatar{
+      width: 200px;
+      height: 200px;
+  }
+
+  header{
+      padding: 5px 0px;
+  }
+
+  .skills {
+      width: 20%;
+  }
+
+  .container {
+      width: 70%;
+  }
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  #avatar{
+      width: 200px;
+      height: 200px;
+  }
+
+  .container {
+      width: 80%;
+  }
+
+  header{
+      padding: 5px 0px;
+  }
+
+  .main-header {
+      font-size: 1em;
+  }
+}
